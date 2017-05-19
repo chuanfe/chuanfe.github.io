@@ -351,13 +351,14 @@
 
       
         
-          
-            <p>一共只留了五个参数，他们分别是发送方式（type）、发请求的url（url）、是否为异步请求（async）、发送的参数（data）、传输成功的回调函数（success）</p>
-<p>函数代码如下:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div></pre></td><td class="code"><pre><div class="line">/* 封装ajax函数</div><div class="line"> * @param &#123;string&#125;opt.type http连接的方式，包括POST和GET两种方式，默认使用GET</div><div class="line"> * @param &#123;string&#125;opt.url 发送请求的url</div><div class="line"> * @param &#123;boolean&#125;opt.async 是否为异步请求，true为异步的，false为同步的</div><div class="line"> * @param &#123;object&#125;opt.data 发送的参数，格式为对象类型</div><div class="line"> * @param &#123;function&#125;opt.success ajax发送并接收成功调用的回调函数</div><div class="line"> */</div><div class="line">function ajax(opt) &#123;</div><div class="line">    　　opt = opt || &#123;&#125;;</div><div class="line">　　var type = opt.type || &apos;GET&apos;;</div><div class="line">    　　type = type.toUpperCase() || &apos;GET&apos;;</div><div class="line">    　　var url = opt.url || &apos;&apos;;</div><div class="line">    　　var async = opt.async || true;</div><div class="line">    　　var data = opt.data || null;</div><div class="line">    　　var success = opt.success || function () &#123;&#125;;</div><div class="line">    　　var xmlHttp = null;</div><div class="line">    　　if (XMLHttpRequest) &#123;</div><div class="line">        　　　　xmlHttp = new XMLHttpRequest();</div><div class="line">    　　&#125;</div><div class="line">    　　else &#123;</div><div class="line">        　　　　xmlHttp = new ActiveXObject(&apos;Microsoft.XMLHTTP&apos;);</div><div class="line">    　　&#125;</div><div class="line">    　　var params = [];</div><div class="line">    　　for (var key in data)&#123;</div><div class="line">        　　　　params.push(key + &apos;=&apos; + data[key]);</div><div class="line">    　　&#125;</div><div class="line">    　　var dataStr = params.join(&apos;&amp;&apos;);</div><div class="line">    　　if (type === &apos;POST&apos;) &#123;</div><div class="line">        　　　　xmlHttp.open(type, url, async);</div><div class="line">        　　　　xmlHttp.setRequestHeader(&apos;Content-Type&apos;, &apos;application/x-www-form-urlencoded;charset=utf-8&apos;);</div><div class="line">        　　　　xmlHttp.send(dataStr);</div><div class="line">    　　&#125;</div><div class="line">    　　else &#123;</div><div class="line">        　　　　xmlHttp.open(type, url + &apos;?&apos; + dataStr, async);</div><div class="line">        　　　　xmlHttp.send(null);</div><div class="line">    　　&#125; </div><div class="line">    　　xmlHttp.onreadystatechange = function () &#123;</div><div class="line">        　　　　if (xmlHttp.readyState == 4 &amp;&amp; xmlHttp.status == 200) &#123;</div><div class="line">            　　　　　　success(xmlHttp.responseText);</div><div class="line">        　　　　&#125;</div><div class="line">    　　&#125;;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>使用实例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">ajax(&#123;</div><div class="line">    method: &apos;POST&apos;,</div><div class="line">    url: &apos;test.php&apos;,</div><div class="line">    data: &#123;</div><div class="line">        name1: &apos;value1&apos;,</div><div class="line">        name2: &apos;value2&apos;</div><div class="line">    &#125;,</div><div class="line">    success: function (response) &#123;</div><div class="line">        // codes here</div><div class="line">    &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
-
-          
+          <p>一共只留了五个参数，他们分别是发送方式（type）、发请求的url（url）、是否为异步请求（async）、发送的参数（data）、传输成功的回调函数（success）<br>
+          <!--noindex-->
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2017/03/10/自己封装的一个ajax函数/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -480,15 +481,142 @@
 
       
         
-          
-            <p>1，双向绑定 v-model</p>
+          <p>1，双向绑定 v-model</p>
 <p>分两种情况</p>
 <p>input 默认为空。这种情况使用 v-model 最方便，通过 this.inputName 即可获取到对应的值。<br>input 有默认值。即，设置了 value 属性的 Input。这种情况不能使用 v-model。否则 data 中的初始化值会把 value 的值覆盖掉。正确的姿势是使用 v-model, 然后通过 ajax 从后台拉取默认值，给对应的 vuejs 变量赋值。对于简单的后台渲染页面，这种方式略显复杂。</p>
 <p>2，使用ref</p>
-<p>在不适合使用 v-model 的时候，我更倾向于使用 ref.<br>vuejs 2.0 之后，废弃了 vuejs 1.0 中的 this.$els，改用 this.$refs。即，使用 ref 属性来标识一个元素。</p>
-<p>示例代码：</p>
-<p>demo.html:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line"></div><div class="line">&lt;head&gt;</div><div class="line">  &lt;meta charset=&quot;utf-8&quot;&gt;</div><div class="line">  &lt;title&gt;Index Page&lt;/title&gt;</div><div class="line">&lt;/head&gt;</div><div class="line"></div><div class="line">&lt;body&gt;</div><div class="line">  &lt;form action=&quot;&quot; id=&quot;demo&quot;&gt;</div><div class="line">    &lt;input type=&quot;text&quot; value=&quot;调试 vuejs 2.0&quot; ref=&quot;input1&quot;&gt;</div><div class="line">    &lt;a href=&quot;javascript:void(0)&quot; v-on:click=&quot;test1&quot;&gt;测试&lt;/a&gt;</div><div class="line">    &lt;br&gt;</div><div class="line">    &lt;span&gt;&#123;&#123; result1 &#125;&#125;&lt;/span&gt;</div><div class="line">    &lt;br&gt;</div><div class="line"></div><div class="line">    &lt;input type=&quot;text&quot; v-model=&quot;input2&quot;&gt;</div><div class="line">    &lt;a href=&quot;javascript:void(0)&quot; v-on:click=&quot;test2&quot;&gt;测试&lt;/a&gt;</div><div class="line">    &lt;br&gt;</div><div class="line">    &lt;span&gt;&#123;&#123; result2 &#125;&#125;&lt;/span&gt;</div><div class="line">  &lt;/form&gt;</div><div class="line"></div><div class="line">  &lt;script src=&quot;http://cdn.bootcss.com/vue/2.0.3/vue.min.js&quot;&gt;&lt;/script&gt;</div><div class="line">  &lt;script type=&quot;text/javascript&quot; src=&quot;demo.js&quot;&gt;&lt;/script&gt;</div><div class="line">&lt;/body&gt;</div><div class="line"></div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure></p>
-<p>demo.js:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">new Vue(&#123;</div><div class="line">    el: &quot;#demo&quot;,</div><div class="line"></div><div class="line">    data: &#123;</div><div class="line">        result1: null,</div><div class="line">        result2: null,</div><div class="line">        input2: &quot;&quot;</div><div class="line">    &#125;,</div><div class="line"></div><div class="line">    created: function() &#123;</div><div class="line">        // the created hook is called after the instance is created</div><div class="line">    &#125;,</div><div class="line"></div><div class="line">    methods: &#123;</div><div class="line">        test1: function () &#123;</div><div class="line">            this.result1 = this.$refs.input1.value + &quot; 成功!&quot;;</div><div class="line">        &#125;,</div><div class="line"></div><div class="line">        test2: function () &#123;</div><div class="line">            this.result2 = this.input2 + &quot; 成功!&quot;;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<p>在不适合使用 v-model 的时候，我更倾向于使用 ref.<br>vuejs 2.0 之后，废弃了 vuejs 1.0 中的 this.$els，改用 this.$refs。即，使用 ref 属性来标识一个元素。<br>
+          <!--noindex-->
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2017/02/27/vuejs-中如何优雅的获取-Input-值/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/27/为什么要写博客/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="wuchuan">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/avatar.jpeg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="chuanFE">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="chuanFE" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/02/27/为什么要写博客/" itemprop="url">
+                  为什么要写博客
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-27T08:36:32+08:00">
+                2017-02-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+             <span id="/2017/02/27/为什么要写博客/" class="leancloud_visitors" data-flag-title="为什么要写博客">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>写博客这个事情我计划了很久，但是太懒也怕写出来的东西质量不高没人看就一直藏在心里。不得不承认，建立技术博客的初衷是因为找工作，哈哈，说起来还是有点功利的性质的。最近刚好在看艾力的《人生的84000种可能》，产生了很多共鸣，没有人是完美的，但是可以通过不断的努力去接近完美，能在这世界中留下自己的印记，能证明自己在世界上存在过，这就足够我去挑战了，何况证明自己的同时，亦可助人，何乐而不为呢。这也许就是我要写博客的理由吧。</p>
 
           
         
@@ -693,7 +821,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-count">4</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
