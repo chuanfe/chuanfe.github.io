@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="javascript,vue.js," />
 
 
 
@@ -100,7 +100,7 @@ input 默认为空。这种情况使用 v-model 最方便，通过 this.inputNam
 <meta property="og:description" content="1，双向绑定 v-model
 分两种情况
 input 默认为空。这种情况使用 v-model 最方便，通过 this.inputName 即可获取到对应的值。input 有默认值。即，设置了 value 属性的 Input。这种情况不能使用 v-model。否则 data 中的初始化值会把 value 的值覆盖掉。正确的姿势是使用 v-model, 然后通过 ajax 从后台拉取默认值，给对应的">
-<meta property="og:updated_time" content="2017-05-19T04:29:20.000Z">
+<meta property="og:updated_time" content="2017-05-19T05:28:12.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vuejs 中如何优雅的获取 Input 值">
 <meta name="twitter:description" content="1，双向绑定 v-model
@@ -212,6 +212,16 @@ input 默认为空。这种情况使用 v-model 最方便，通过 this.inputNam
         </li>
       
         
+        <li class="menu-item menu-item-books">
+          <a href="/books" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-book"></i> <br />
+            
+            书单
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-about">
           <a href="/about" rel="section">
             
@@ -318,6 +328,24 @@ input 默认为空。这种情况使用 v-model 最方便，通过 this.inputNam
           </span>
 
           
+            <span class="post-category" >
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -401,6 +429,14 @@ input 默认为空。这种情况使用 v-model 最方便，通过 this.inputNam
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/javascript/" rel="tag"># javascript</a>
+          
+            <a href="/tags/vue-js/" rel="tag"># vue.js</a>
+          
+        </div>
+      
 
       
         <div class="post-nav">
@@ -483,7 +519,21 @@ input 默认为空。这种情况使用 v-model 最方便，通过 this.inputNam
           </div>
 
           
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
 
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
           
 
         </nav>
