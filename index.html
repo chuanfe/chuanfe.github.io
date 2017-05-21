@@ -275,6 +275,144 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/18/事件冒泡和事件捕获/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="wuchuan">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/avatar.jpeg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="chuanFE">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="chuanFE" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/03/18/事件冒泡和事件捕获/" itemprop="url">
+                  事件冒泡和事件捕获
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-18T10:06:33+08:00">
+                2017-03-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+             <span id="/2017/03/18/事件冒泡和事件捕获/" class="leancloud_visitors" data-flag-title="事件冒泡和事件捕获">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="一-事件阶段"><a href="#一-事件阶段" class="headerlink" title="一 事件阶段"></a>一 事件阶段</h3><p>一般的，事件分为三个阶段：捕获阶段、目标阶段和冒泡阶段。</p>
+<h4 id="1-捕获阶段："><a href="#1-捕获阶段：" class="headerlink" title="1 捕获阶段："></a>1 捕获阶段：</h4><p>事件的第一个阶段是捕获阶段。事件从最不精确的对象(文档根节点)开始触发，然后到触发最精确的对象(目标对象节点)结束。途中经过各个层次的DOM节点，并在各节点上触发捕获事件，直到到达事件的目标节点。当你使用事件捕获时，父级元素事件先触发，子级元素后触发。<br>作用：捕获阶段的主要任务是建立传播路径，在冒泡阶段，事件会通过这个路径回溯到文档跟节点。</p>
+<h4 id="2-目标阶段："><a href="#2-目标阶段：" class="headerlink" title="2 目标阶段："></a>2 目标阶段：</h4><p>当事件到达目标节点的，事件就进入了目标阶段。事件在目标节点上被触发，然后会逆向回流，直到传播至最外层的文档节点。</p>
+<h4 id="3-冒泡阶段："><a href="#3-冒泡阶段：" class="headerlink" title="3 冒泡阶段："></a>3 冒泡阶段：</h4><p>事件按照从最精确的对象(目标对象节点)开始触发，一直到最不精确的事件目标(文档根节点)的顺序触发结束。事件在目标元素上触发后，并不在这个元素上终止。它会随着DOM树一层层向上冒泡，回溯到根节点。当你使用事件冒泡时，子级元素事件先触发，父级元素后触发。<br>作用：冒泡过程非常有用。它将我们从对特定元素的事件监听中释放出来，如果没有事件冒泡，我们需要监听很多不同的元素来确保捕获到想要的事件。</p>
+<h3 id="二-冒泡阶段调用事件处理函数"><a href="#二-冒泡阶段调用事件处理函数" class="headerlink" title="二 冒泡阶段调用事件处理函数"></a>二 冒泡阶段调用事件处理函数</h3><h3 id="三-捕获阶段调用事件处理函数"><a href="#三-捕获阶段调用事件处理函数" class="headerlink" title="三 捕获阶段调用事件处理函数"></a>三 捕获阶段调用事件处理函数</h3><h3 id="四-事件代理"><a href="#四-事件代理" class="headerlink" title="四 事件代理"></a>四 事件代理</h3><p>在传统的事件处理中，你按照需要为每一个元素添加或者是删除事件处理器。然而，事件处理器将有可能导致内存泄露或者是性能下降——你用得越多这种风险就越大。JavaScript事件代理可以把事件处理器添加到一个父元素上，这样就避免了把事件处理器添加到多个子元素上。</p>
+<h4 id="1-如何运作"><a href="#1-如何运作" class="headerlink" title="1 如何运作"></a>1 如何运作</h4><p>事件代理用到了两个JavaSciprt事件特性：事件冒泡以及目标元素。当一个元素上的事件被触发的时候，同样的事件将会在那个元素的所有祖先元素中被触发。这一过程被称为事件冒泡；使用事件代理，我们可以把事件处理器添加到一个元素上，等待一个事件从它的子级元素里冒泡上来，并且可以得知这个事件是从哪个元素开始的。</p>
+<h4 id="2-带来的好处"><a href="#2-带来的好处" class="headerlink" title="2 带来的好处"></a>2 带来的好处</h4><p>比如说在一个10列、100行的HTML表格里，让其每一个单元格在被点击的时候变成可编辑状态。如果把事件处理器加到这1000个单元格会产生一个很大的性能问题，并且有可能导致内存泄露甚至是浏览器的崩溃。相反地，使用事件代理，你只需要把一个事件处理器添加到table元素上就可以了，这个函数可以把点击事件给截下来，并且判断出是哪个单元格被点击了。</p>
+<h3 id="五-阻止事件冒泡（stopPropagation）"><a href="#五-阻止事件冒泡（stopPropagation）" class="headerlink" title="五 阻止事件冒泡（stopPropagation）"></a>五 阻止事件冒泡（stopPropagation）</h3><h4 id="1-什么时候要阻止事件冒泡"><a href="#1-什么时候要阻止事件冒泡" class="headerlink" title="1 什么时候要阻止事件冒泡"></a>1 什么时候要阻止事件冒泡</h4><p>当父类也有同样类型的方法，但在调用子类方法的时候不想触发父类方法的时候要阻止冒泡。<br>例如：document上有A事件，div有B事件，div里面的span有C事件，如果不给span和div加阻止事件冒泡的话，点击span时就会触发到div的B事件、document的A事件，当点击span时不想触发div和document的事件就要加上阻止事件冒泡，div也是一样的道理。如果不加阻止事件冒泡，便会由于事件冒泡，该DOM目标节点的所有父节点事件也会触发，执行了回调函数，这样就违背了最初的本意了。</p>
+<h4 id="2-如何阻止事件冒泡"><a href="#2-如何阻止事件冒泡" class="headerlink" title="2 如何阻止事件冒泡"></a>2 如何阻止事件冒泡</h4><p>阻止事件冒泡有3种方法</p>
+<h5 id="1-event-stopPropagation"><a href="#1-event-stopPropagation" class="headerlink" title="(1) event.stopPropagation();"></a>(1) event.stopPropagation();</h5><p>   事件处理过程中，阻止了事件冒泡，但不会阻击默认行为（它就执行了超链接的跳转）</p>
+<h5 id="2-return-false"><a href="#2-return-false" class="headerlink" title="(2) return false;"></a>(2) return false;</h5><p>   事件处理过程中，阻止了事件冒泡，也阻止了默认行为（比如刚才它就没有执行超链接的跳转）</p>
+<h5 id="3-event-preventDefault"><a href="#3-event-preventDefault" class="headerlink" title="(3) event.preventDefault();"></a>(3) event.preventDefault();</h5><p>   如果把它放在头部A标签的click事件中，点击“点击我”。<br>   会发现它依次弹出：我是最里层—-&gt;我是中间层—-&gt;我是最外层，但最后却没有跳转到百度<br>   它的作用是：事件处理过程中，不阻击事件冒泡，但阻击默认行为（它只执行所有弹框，却没有执行超链接跳转）</p>
+<h4 id="3-无法在捕获阶段阻止事件冒泡"><a href="#3-无法在捕获阶段阻止事件冒泡" class="headerlink" title="3 无法在捕获阶段阻止事件冒泡"></a>3 无法在捕获阶段阻止事件冒泡</h4><p>这里需要注意的是，我们无法在事件捕获阶段阻止事件冒泡。例如，我们在代码里加上true，如图所示，第一个li会触发事件。因为捕获是从根节点向目标节点触发，而冒泡是从目标节点向根节点触发。</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
   <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/10/自己封装的一个ajax函数/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -423,6 +561,136 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/05/前端框架和原生js的选择困惑/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="wuchuan">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/avatar.jpeg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="chuanFE">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="chuanFE" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/03/05/前端框架和原生js的选择困惑/" itemprop="url">
+                  前端框架和原生js的选择困惑
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-05T21:41:15+08:00">
+                2017-03-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+             <span id="/2017/03/05/前端框架和原生js的选择困惑/" class="leancloud_visitors" data-flag-title="前端框架和原生js的选择困惑">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>最近用框架写东西有点多，快速开发用框架没错，毕竟用着也很爽，但问题是用框架开发，关键的技术前提给你预设好了，重要的技术决定也帮你做了，你做得最多的就是往里填展示逻辑，业务逻辑。<br>而学习需要的是把技术掰开来，扯碎了再装起来，知道“原来如此”的过程。虽然遇到的问题基本都能解决，但写的越多总感觉自己不太深入，今天遇到一个问题，也印证了我的担忧，自己有些停在表面了，光解决问题没深入学习。<br>
+          <!--noindex-->
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2017/03/05/前端框架和原生js的选择困惑/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
   <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/27/vuejs-中如何优雅的获取-Input-值/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -527,11 +795,7 @@
 
       
         
-          <p>1，双向绑定 v-model</p>
-<p>分两种情况</p>
-<p>input 默认为空。这种情况使用 v-model 最方便，通过 this.inputName 即可获取到对应的值。<br>input 有默认值。即，设置了 value 属性的 Input。这种情况不能使用 v-model。否则 data 中的初始化值会把 value 的值覆盖掉。正确的姿势是使用 v-model, 然后通过 ajax 从后台拉取默认值，给对应的 vuejs 变量赋值。对于简单的后台渲染页面，这种方式略显复杂。</p>
-<p>2，使用ref</p>
-<p>在不适合使用 v-model 的时候，我更倾向于使用 ref.<br>vuejs 2.0 之后，废弃了 vuejs 1.0 中的 this.$els，改用 this.$refs。即，使用 ref 属性来标识一个元素。<br>
+          <p>vue 中获取 Input 值 我一般采取v-model或ref的方法<br>
           <!--noindex-->
           <div class="post-more-link text-center">
             <a class="btn" href="/2017/02/27/vuejs-中如何优雅的获取-Input-值/#more" rel="contents">
@@ -787,18 +1051,14 @@
 
       
         
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-          
+          <p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.<br>
+          <!--noindex-->
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2017/02/27/hello-world/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -867,7 +1127,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">6</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

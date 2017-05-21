@@ -90,22 +90,16 @@
 
 
 
-<meta name="description" content="1，双向绑定 v-model
-分两种情况
-input 默认为空。这种情况使用 v-model 最方便，通过 this.inputName 即可获取到对应的值。input 有默认值。即，设置了 value 属性的 Input。这种情况不能使用 v-model。否则 data 中的初始化值会把 value 的值覆盖掉。正确的姿势是使用 v-model, 然后通过 ajax 从后台拉取默认值，给对应的">
+<meta name="description" content="vue 中获取 Input 值 我一般采取v-model或ref的方法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="vuejs 中如何优雅的获取 Input 值">
 <meta property="og:url" content="http://yoursite.com/2017/02/27/vuejs-中如何优雅的获取-Input-值/index.html">
 <meta property="og:site_name" content="chuanFE">
-<meta property="og:description" content="1，双向绑定 v-model
-分两种情况
-input 默认为空。这种情况使用 v-model 最方便，通过 this.inputName 即可获取到对应的值。input 有默认值。即，设置了 value 属性的 Input。这种情况不能使用 v-model。否则 data 中的初始化值会把 value 的值覆盖掉。正确的姿势是使用 v-model, 然后通过 ajax 从后台拉取默认值，给对应的">
-<meta property="og:updated_time" content="2017-05-19T05:28:12.000Z">
+<meta property="og:description" content="vue 中获取 Input 值 我一般采取v-model或ref的方法">
+<meta property="og:updated_time" content="2017-05-21T02:02:00.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vuejs 中如何优雅的获取 Input 值">
-<meta name="twitter:description" content="1，双向绑定 v-model
-分两种情况
-input 默认为空。这种情况使用 v-model 最方便，通过 this.inputName 即可获取到对应的值。input 有默认值。即，设置了 value 属性的 Input。这种情况不能使用 v-model。否则 data 中的初始化值会把 value 的值覆盖掉。正确的姿势是使用 v-model, 然后通过 ajax 从后台拉取默认值，给对应的">
+<meta name="twitter:description" content="vue 中获取 Input 值 我一般采取v-model或ref的方法">
 
 
 
@@ -380,11 +374,12 @@ input 默认为空。这种情况使用 v-model 最方便，通过 this.inputNam
       
 
       
-        <p>1，双向绑定 v-model</p>
+        <p>vue 中获取 Input 值 我一般采取v-model或ref的方法<br><a id="more"></a><br>1，双向绑定 v-model</p>
 <p>分两种情况</p>
 <p>input 默认为空。这种情况使用 v-model 最方便，通过 this.inputName 即可获取到对应的值。<br>input 有默认值。即，设置了 value 属性的 Input。这种情况不能使用 v-model。否则 data 中的初始化值会把 value 的值覆盖掉。正确的姿势是使用 v-model, 然后通过 ajax 从后台拉取默认值，给对应的 vuejs 变量赋值。对于简单的后台渲染页面，这种方式略显复杂。</p>
 <p>2，使用ref</p>
-<p>在不适合使用 v-model 的时候，我更倾向于使用 ref.<br>vuejs 2.0 之后，废弃了 vuejs 1.0 中的 this.$els，改用 this.$refs。即，使用 ref 属性来标识一个元素。<br><a id="more"></a><br>示例代码：</p>
+<p>在不适合使用 v-model 的时候，我更倾向于使用 ref.<br>vuejs 2.0 之后，废弃了 vuejs 1.0 中的 this.$els，改用 this.$refs。即，使用 ref 属性来标识一个元素。</p>
+<p>示例代码：</p>
 <p>demo.html:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line"></div><div class="line">&lt;head&gt;</div><div class="line">  &lt;meta charset=&quot;utf-8&quot;&gt;</div><div class="line">  &lt;title&gt;Index Page&lt;/title&gt;</div><div class="line">&lt;/head&gt;</div><div class="line"></div><div class="line">&lt;body&gt;</div><div class="line">  &lt;form action=&quot;&quot; id=&quot;demo&quot;&gt;</div><div class="line">    &lt;input type=&quot;text&quot; value=&quot;调试 vuejs 2.0&quot; ref=&quot;input1&quot;&gt;</div><div class="line">    &lt;a href=&quot;javascript:void(0)&quot; v-on:click=&quot;test1&quot;&gt;测试&lt;/a&gt;</div><div class="line">    &lt;br&gt;</div><div class="line">    &lt;span&gt;&#123;&#123; result1 &#125;&#125;&lt;/span&gt;</div><div class="line">    &lt;br&gt;</div><div class="line"></div><div class="line">    &lt;input type=&quot;text&quot; v-model=&quot;input2&quot;&gt;</div><div class="line">    &lt;a href=&quot;javascript:void(0)&quot; v-on:click=&quot;test2&quot;&gt;测试&lt;/a&gt;</div><div class="line">    &lt;br&gt;</div><div class="line">    &lt;span&gt;&#123;&#123; result2 &#125;&#125;&lt;/span&gt;</div><div class="line">  &lt;/form&gt;</div><div class="line"></div><div class="line">  &lt;script src=&quot;http://cdn.bootcss.com/vue/2.0.3/vue.min.js&quot;&gt;&lt;/script&gt;</div><div class="line">  &lt;script type=&quot;text/javascript&quot; src=&quot;demo.js&quot;&gt;&lt;/script&gt;</div><div class="line">&lt;/body&gt;</div><div class="line"></div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure></p>
 <p>demo.js:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">new Vue(&#123;</div><div class="line">    el: &quot;#demo&quot;,</div><div class="line"></div><div class="line">    data: &#123;</div><div class="line">        result1: null,</div><div class="line">        result2: null,</div><div class="line">        input2: &quot;&quot;</div><div class="line">    &#125;,</div><div class="line"></div><div class="line">    created: function() &#123;</div><div class="line">        // the created hook is called after the instance is created</div><div class="line">    &#125;,</div><div class="line"></div><div class="line">    methods: &#123;</div><div class="line">        test1: function () &#123;</div><div class="line">            this.result1 = this.$refs.input1.value + &quot; 成功!&quot;;</div><div class="line">        &#125;,</div><div class="line"></div><div class="line">        test2: function () &#123;</div><div class="line">            this.result2 = this.input2 + &quot; 成功!&quot;;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
 
@@ -452,8 +447,8 @@ input 默认为空。这种情况使用 v-model 最方便，通过 this.inputNam
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/03/10/自己封装的一个ajax函数/" rel="prev" title="自己封装的一个ajax函数">
-                自己封装的一个ajax函数 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/03/05/前端框架和原生js的选择困惑/" rel="prev" title="前端框架和原生js的选择困惑">
+                前端框架和原生js的选择困惑 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -513,7 +508,7 @@ input 默认为空。这种情况使用 v-model 最方便，通过 this.inputNam
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">6</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

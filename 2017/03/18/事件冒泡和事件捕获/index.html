@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="javascript," />
 
 
 
@@ -90,16 +90,19 @@
 
 
 
-<meta name="description" content="写博客这个事情我计划了很久，但是太懒也怕写出来的东西质量不高没人看就一直藏在心里。不得不承认，建立技术博客的初衷是因为找工作，哈哈，说起来还是有点功利的性质的。最近刚好在看艾力的《人生的84000种可能》，产生了很多共鸣，没有人是完美的，但是可以通过不断的努力去接近完美，能在这世界中留下自己的印记，能证明自己在世界上存在过，这就足够我去挑战了，何况证明自己的同时，亦可助人，何乐而不为呢。这也许就是">
+<meta name="description" content="一 事件阶段一般的，事件分为三个阶段：捕获阶段、目标阶段和冒泡阶段。
+1 捕获阶段：事件的第一个阶段是捕获阶段。事件从最不精确的对象(文档根节点)开始触发，然后到触发最精确的对象(目标对象节点)结束。途中经过各个层次的DOM节点，并在各节点上触发捕获事件，直到到达事件的目标节点。当你使用事件捕获时，父级元素事件先触发，子级元素后触发。作用：捕获阶段的主要任务是建立传播路径，在冒泡阶段，事件会通过这">
 <meta property="og:type" content="article">
-<meta property="og:title" content="为什么要写博客">
-<meta property="og:url" content="http://yoursite.com/2017/02/27/为什么要写博客/index.html">
+<meta property="og:title" content="事件冒泡和事件捕获">
+<meta property="og:url" content="http://yoursite.com/2017/03/18/事件冒泡和事件捕获/index.html">
 <meta property="og:site_name" content="chuanFE">
-<meta property="og:description" content="写博客这个事情我计划了很久，但是太懒也怕写出来的东西质量不高没人看就一直藏在心里。不得不承认，建立技术博客的初衷是因为找工作，哈哈，说起来还是有点功利的性质的。最近刚好在看艾力的《人生的84000种可能》，产生了很多共鸣，没有人是完美的，但是可以通过不断的努力去接近完美，能在这世界中留下自己的印记，能证明自己在世界上存在过，这就足够我去挑战了，何况证明自己的同时，亦可助人，何乐而不为呢。这也许就是">
-<meta property="og:updated_time" content="2017-05-19T05:24:27.000Z">
+<meta property="og:description" content="一 事件阶段一般的，事件分为三个阶段：捕获阶段、目标阶段和冒泡阶段。
+1 捕获阶段：事件的第一个阶段是捕获阶段。事件从最不精确的对象(文档根节点)开始触发，然后到触发最精确的对象(目标对象节点)结束。途中经过各个层次的DOM节点，并在各节点上触发捕获事件，直到到达事件的目标节点。当你使用事件捕获时，父级元素事件先触发，子级元素后触发。作用：捕获阶段的主要任务是建立传播路径，在冒泡阶段，事件会通过这">
+<meta property="og:updated_time" content="2017-05-21T02:53:58.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="为什么要写博客">
-<meta name="twitter:description" content="写博客这个事情我计划了很久，但是太懒也怕写出来的东西质量不高没人看就一直藏在心里。不得不承认，建立技术博客的初衷是因为找工作，哈哈，说起来还是有点功利的性质的。最近刚好在看艾力的《人生的84000种可能》，产生了很多共鸣，没有人是完美的，但是可以通过不断的努力去接近完美，能在这世界中留下自己的印记，能证明自己在世界上存在过，这就足够我去挑战了，何况证明自己的同时，亦可助人，何乐而不为呢。这也许就是">
+<meta name="twitter:title" content="事件冒泡和事件捕获">
+<meta name="twitter:description" content="一 事件阶段一般的，事件分为三个阶段：捕获阶段、目标阶段和冒泡阶段。
+1 捕获阶段：事件的第一个阶段是捕获阶段。事件从最不精确的对象(文档根节点)开始触发，然后到触发最精确的对象(目标对象节点)结束。途中经过各个层次的DOM节点，并在各节点上触发捕获事件，直到到达事件的目标节点。当你使用事件捕获时，父级元素事件先触发，子级元素后触发。作用：捕获阶段的主要任务是建立传播路径，在冒泡阶段，事件会通过这">
 
 
 
@@ -127,13 +130,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/02/27/为什么要写博客/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/03/18/事件冒泡和事件捕获/"/>
 
 
 
 
 
-  <title> 为什么要写博客 | chuanFE </title>
+  <title> 事件冒泡和事件捕获 | chuanFE </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -274,7 +277,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/27/为什么要写博客/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/18/事件冒泡和事件捕获/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="wuchuan">
@@ -298,7 +301,7 @@
             
             
               
-                为什么要写博客
+                事件冒泡和事件捕获
               
             
           </h1>
@@ -311,8 +314,8 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-27T08:36:32+08:00">
-                2017-02-27
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-18T10:06:33+08:00">
+                2017-03-18
               </time>
             
 
@@ -331,7 +334,7 @@
 
           
           
-             <span id="/2017/02/27/为什么要写博客/" class="leancloud_visitors" data-flag-title="为什么要写博客">
+             <span id="/2017/03/18/事件冒泡和事件捕获/" class="leancloud_visitors" data-flag-title="事件冒泡和事件捕获">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -356,7 +359,19 @@
       
 
       
-        <p>写博客这个事情我计划了很久，但是太懒也怕写出来的东西质量不高没人看就一直藏在心里。不得不承认，建立技术博客的初衷是因为找工作，哈哈，说起来还是有点功利的性质的。最近刚好在看艾力的《人生的84000种可能》，产生了很多共鸣，没有人是完美的，但是可以通过不断的努力去接近完美，能在这世界中留下自己的印记，能证明自己在世界上存在过，这就足够我去挑战了，何况证明自己的同时，亦可助人，何乐而不为呢。这也许就是我要写博客的理由吧。</p>
+        <h3 id="一-事件阶段"><a href="#一-事件阶段" class="headerlink" title="一 事件阶段"></a>一 事件阶段</h3><p>一般的，事件分为三个阶段：捕获阶段、目标阶段和冒泡阶段。</p>
+<h4 id="1-捕获阶段："><a href="#1-捕获阶段：" class="headerlink" title="1 捕获阶段："></a>1 捕获阶段：</h4><p>事件的第一个阶段是捕获阶段。事件从最不精确的对象(文档根节点)开始触发，然后到触发最精确的对象(目标对象节点)结束。途中经过各个层次的DOM节点，并在各节点上触发捕获事件，直到到达事件的目标节点。当你使用事件捕获时，父级元素事件先触发，子级元素后触发。<br>作用：捕获阶段的主要任务是建立传播路径，在冒泡阶段，事件会通过这个路径回溯到文档跟节点。</p>
+<h4 id="2-目标阶段："><a href="#2-目标阶段：" class="headerlink" title="2 目标阶段："></a>2 目标阶段：</h4><p>当事件到达目标节点的，事件就进入了目标阶段。事件在目标节点上被触发，然后会逆向回流，直到传播至最外层的文档节点。</p>
+<h4 id="3-冒泡阶段："><a href="#3-冒泡阶段：" class="headerlink" title="3 冒泡阶段："></a>3 冒泡阶段：</h4><p>事件按照从最精确的对象(目标对象节点)开始触发，一直到最不精确的事件目标(文档根节点)的顺序触发结束。事件在目标元素上触发后，并不在这个元素上终止。它会随着DOM树一层层向上冒泡，回溯到根节点。当你使用事件冒泡时，子级元素事件先触发，父级元素后触发。<br>作用：冒泡过程非常有用。它将我们从对特定元素的事件监听中释放出来，如果没有事件冒泡，我们需要监听很多不同的元素来确保捕获到想要的事件。</p>
+<h3 id="二-冒泡阶段调用事件处理函数"><a href="#二-冒泡阶段调用事件处理函数" class="headerlink" title="二 冒泡阶段调用事件处理函数"></a>二 冒泡阶段调用事件处理函数</h3><h3 id="三-捕获阶段调用事件处理函数"><a href="#三-捕获阶段调用事件处理函数" class="headerlink" title="三 捕获阶段调用事件处理函数"></a>三 捕获阶段调用事件处理函数</h3><h3 id="四-事件代理"><a href="#四-事件代理" class="headerlink" title="四 事件代理"></a>四 事件代理</h3><p>在传统的事件处理中，你按照需要为每一个元素添加或者是删除事件处理器。然而，事件处理器将有可能导致内存泄露或者是性能下降——你用得越多这种风险就越大。JavaScript事件代理可以把事件处理器添加到一个父元素上，这样就避免了把事件处理器添加到多个子元素上。</p>
+<h4 id="1-如何运作"><a href="#1-如何运作" class="headerlink" title="1 如何运作"></a>1 如何运作</h4><p>事件代理用到了两个JavaSciprt事件特性：事件冒泡以及目标元素。当一个元素上的事件被触发的时候，同样的事件将会在那个元素的所有祖先元素中被触发。这一过程被称为事件冒泡；使用事件代理，我们可以把事件处理器添加到一个元素上，等待一个事件从它的子级元素里冒泡上来，并且可以得知这个事件是从哪个元素开始的。</p>
+<h4 id="2-带来的好处"><a href="#2-带来的好处" class="headerlink" title="2 带来的好处"></a>2 带来的好处</h4><p>比如说在一个10列、100行的HTML表格里，让其每一个单元格在被点击的时候变成可编辑状态。如果把事件处理器加到这1000个单元格会产生一个很大的性能问题，并且有可能导致内存泄露甚至是浏览器的崩溃。相反地，使用事件代理，你只需要把一个事件处理器添加到table元素上就可以了，这个函数可以把点击事件给截下来，并且判断出是哪个单元格被点击了。</p>
+<h3 id="五-阻止事件冒泡（stopPropagation）"><a href="#五-阻止事件冒泡（stopPropagation）" class="headerlink" title="五 阻止事件冒泡（stopPropagation）"></a>五 阻止事件冒泡（stopPropagation）</h3><h4 id="1-什么时候要阻止事件冒泡"><a href="#1-什么时候要阻止事件冒泡" class="headerlink" title="1 什么时候要阻止事件冒泡"></a>1 什么时候要阻止事件冒泡</h4><p>当父类也有同样类型的方法，但在调用子类方法的时候不想触发父类方法的时候要阻止冒泡。<br>例如：document上有A事件，div有B事件，div里面的span有C事件，如果不给span和div加阻止事件冒泡的话，点击span时就会触发到div的B事件、document的A事件，当点击span时不想触发div和document的事件就要加上阻止事件冒泡，div也是一样的道理。如果不加阻止事件冒泡，便会由于事件冒泡，该DOM目标节点的所有父节点事件也会触发，执行了回调函数，这样就违背了最初的本意了。</p>
+<h4 id="2-如何阻止事件冒泡"><a href="#2-如何阻止事件冒泡" class="headerlink" title="2 如何阻止事件冒泡"></a>2 如何阻止事件冒泡</h4><p>阻止事件冒泡有3种方法</p>
+<h5 id="1-event-stopPropagation"><a href="#1-event-stopPropagation" class="headerlink" title="(1) event.stopPropagation();"></a>(1) event.stopPropagation();</h5><p>   事件处理过程中，阻止了事件冒泡，但不会阻击默认行为（它就执行了超链接的跳转）</p>
+<h5 id="2-return-false"><a href="#2-return-false" class="headerlink" title="(2) return false;"></a>(2) return false;</h5><p>   事件处理过程中，阻止了事件冒泡，也阻止了默认行为（比如刚才它就没有执行超链接的跳转）</p>
+<h5 id="3-event-preventDefault"><a href="#3-event-preventDefault" class="headerlink" title="(3) event.preventDefault();"></a>(3) event.preventDefault();</h5><p>   如果把它放在头部A标签的click事件中，点击“点击我”。<br>   会发现它依次弹出：我是最里层—-&gt;我是中间层—-&gt;我是最外层，但最后却没有跳转到百度<br>   它的作用是：事件处理过程中，不阻击事件冒泡，但阻击默认行为（它只执行所有弹框，却没有执行超链接跳转）</p>
+<h4 id="3-无法在捕获阶段阻止事件冒泡"><a href="#3-无法在捕获阶段阻止事件冒泡" class="headerlink" title="3 无法在捕获阶段阻止事件冒泡"></a>3 无法在捕获阶段阻止事件冒泡</h4><p>这里需要注意的是，我们无法在事件捕获阶段阻止事件冒泡。例如，我们在代码里加上true，如图所示，第一个li会触发事件。因为捕获是从根节点向目标节点触发，而冒泡是从目标节点向根节点触发。</p>
 
       
     </div>
@@ -399,13 +414,19 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/javascript/" rel="tag"># javascript</a>
+          
+        </div>
+      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/02/27/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2017/03/10/自己封装的一个ajax函数/" rel="next" title="自己封装的一个ajax函数">
+                <i class="fa fa-chevron-left"></i> 自己封装的一个ajax函数
               </a>
             
           </div>
@@ -413,10 +434,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/02/27/vuejs-中如何优雅的获取-Input-值/" rel="prev" title="vuejs 中如何优雅的获取 Input 值">
-                vuejs 中如何优雅的获取 Input 值 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -463,8 +480,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpeg"
@@ -546,6 +572,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一-事件阶段"><span class="nav-number">1.</span> <span class="nav-text">一 事件阶段</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-捕获阶段："><span class="nav-number">1.1.</span> <span class="nav-text">1 捕获阶段：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-目标阶段："><span class="nav-number">1.2.</span> <span class="nav-text">2 目标阶段：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-冒泡阶段："><span class="nav-number">1.3.</span> <span class="nav-text">3 冒泡阶段：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二-冒泡阶段调用事件处理函数"><span class="nav-number">2.</span> <span class="nav-text">二 冒泡阶段调用事件处理函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三-捕获阶段调用事件处理函数"><span class="nav-number">3.</span> <span class="nav-text">三 捕获阶段调用事件处理函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四-事件代理"><span class="nav-number">4.</span> <span class="nav-text">四 事件代理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-如何运作"><span class="nav-number">4.1.</span> <span class="nav-text">1 如何运作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-带来的好处"><span class="nav-number">4.2.</span> <span class="nav-text">2 带来的好处</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#五-阻止事件冒泡（stopPropagation）"><span class="nav-number">5.</span> <span class="nav-text">五 阻止事件冒泡（stopPropagation）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-什么时候要阻止事件冒泡"><span class="nav-number">5.1.</span> <span class="nav-text">1 什么时候要阻止事件冒泡</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-如何阻止事件冒泡"><span class="nav-number">5.2.</span> <span class="nav-text">2 如何阻止事件冒泡</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-event-stopPropagation"><span class="nav-number">5.2.1.</span> <span class="nav-text">(1) event.stopPropagation();</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-return-false"><span class="nav-number">5.2.2.</span> <span class="nav-text">(2) return false;</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-event-preventDefault"><span class="nav-number">5.2.3.</span> <span class="nav-text">(3) event.preventDefault();</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-无法在捕获阶段阻止事件冒泡"><span class="nav-number">5.3.</span> <span class="nav-text">3 无法在捕获阶段阻止事件冒泡</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
     </div>
