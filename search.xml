@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[南京街头一日游]]></title>
+    <url>%2F2017%2F05%2F13%2F%E5%8D%97%E4%BA%AC%E8%A1%97%E5%A4%B4%E4%B8%80%E6%97%A5%E6%B8%B8%2F</url>
+    <content type="text"><![CDATA[]]></content>
+      <tags>
+        <tag>生活</tag>
+        <tag>南京</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[记近期电脑升级一事]]></title>
+    <url>%2F2017%2F04%2F22%2F%E8%AE%B0%E8%BF%91%E6%9C%9F%E7%94%B5%E8%84%91%E5%8D%87%E7%BA%A7%E4%B8%80%E4%BA%8B%2F</url>
+    <content type="text"><![CDATA[去年4月份买的dell台式机，到现在正好一年。但是最近发现开机变慢了很多，等半天很是伤，玩游戏也没以前流畅了，这才一岁啊，，其实最主要的原因还是女朋友直播游戏太卡了，，于是决定给电脑来一次全面升级，算是给它陪伴我们一年来的小小回报吧。原先配置：因特尔i5-4460 处理器，内存4G，GTX745的显卡(4G)，1T机械硬盘，win7i5的处理器不打算升级，性能还好。主要是显卡和硬盘第一件物品 显卡，市场上 显卡 产品可谓琳琅满目，各有各的特色，网上搜刮了一圈后发现，好的太贵，便宜的又没升级必要，挑来挑去千元左右的显卡就剩下1050TI，别无他选。网上也很多说1050Ti性价比不咋咋的，但还是决定入手。说下1050Ti的优点吧 功耗和温度，大部分1050ti不需外接6pin，可以做得比较小，简直是小机箱的绝佳搭档。就是有类似于intel睿频的功能，玩游戏的时候可以从默频1500Mhz拉到1750Mhz 于是从某东买了新显卡GTX1050Ti（￥1199）显卡第二天就来了，一切顺利啊，晚上下班准备拆机装显卡比之前的大太多，装的时候费了些劲 就在我为自己的英明抉择佩服不已的时候，剧情发生了 360 ℃ 反转。猴急猴急测试显卡性能的时候，开机一直点不亮。。。折腾半天才发现之前dell的电源功率带不动新的显卡，，卧槽，早知如此，何必买那么好的。犯下如此低端错误，实在打脸。 于是又在某宝买了硬盘架(￥9.9)，电源（¥80）总算能开机了，但是用了一天发现并没有快多少，玩游戏还是一样的卡，开机还是一样慢。。 早有耳闻说 SSD 如何如何的快，快到足够让旧设备重新焕发青春。于是下一件升级物品 SSD在某宝上看了半天，最后在闲鱼上买了换了硬盘重装完系统，重启，开机10s，完美如此一番，除了荷包渐瘦以外，其他都到位了。]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[最简易的评分组件]]></title>
+    <url>%2F2017%2F04%2F01%2F%E6%9C%80%E7%AE%80%E6%98%93%E7%9A%84%E8%AF%84%E5%88%86%E7%BB%84%E4%BB%B6%2F</url>
+    <content type="text"><![CDATA[12var rate = 1&quot;★★★★★☆☆☆☆☆&quot;.slice(5 - rate, 10 - rate) 结果：”★☆☆☆☆”12var rate = 2&quot;★★★★★☆☆☆☆☆&quot;.slice(5 - rate, 10 - rate) 结果：”★★☆☆☆”12var rate = 3&quot;★★★★★☆☆☆☆☆&quot;.slice(5 - rate, 10 - rate) 结果：”★★★☆☆”12var rate = 4&quot;★★★★★☆☆☆☆☆&quot;.slice(5 - rate, 10 - rate) 结果：”★★★★☆”12var rate = 5&quot;★★★★★☆☆☆☆☆&quot;.slice(5 - rate, 10 - rate) 结果：”★★★★★”]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[对js闭包的理解及其应用]]></title>
+    <url>%2F2017%2F03%2F25%2F%E5%AF%B9js%E9%97%AD%E5%8C%85%E7%9A%84%E7%90%86%E8%A7%A3%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8%2F</url>
+    <content type="text"><![CDATA[闭包的概念简单来说，闭包指的是被持久化的函数以及它所保留的对外层变量的引用的组合。具体来说，闭包就是保留了对自由变量的引用的函数。与面向对象方式使用类属性来保留数据不同，闭包是通过词法作用域来保留对于变量的引用的。词法作用域的最基本特性是：在嵌套的作用域中，某个作用域可以访问本层定义的变量，也可以访问外层的变量，但是不能访问内层的变量。对于 js 语言来说，最常见的作用域层级就是 var 声明所对应的函数级别作用域。首先，由于外层作用域无法访问内层作用域的变量，因此自由变量肯定不会是内层变量。其次，对于本层定义的变量来说，函数执行完毕后，这些变量就会被销毁，留待垃圾回收，因此本层的变量不具备保留引用的特性。所以最后的结论已经很明确，保留引用的自由变量只能是外层的变量。因此，闭包是保留了对外层自由变量的引用的函数。如何保留对外层变量的引用？这要求函数能以某种方式被持久化保留。 来个例子：1234567891011121314function closure()&#123; var count = 0; return function()&#123; console.log(++count); &#125;&#125;var getCount = closure();getCount(); // 输出 1getCount(); // 输出 2getCount(); // 输出 3... 在这个例子中，调用 closure() 函数时，内层的匿名函数被作为返回值赋予了外部的 getCount 变量。由于内层的匿名函数需要使用外层的 count 变量，因此外层变量 count 就被匿名函数保留了引用。而每次调用 getCount() ， count 变量的值都会被加一。在这个例子中，内层的匿名函数以及它所保留的对于外层变量 count 的引用就构成了闭包。 如果内层函数没有用任何方式持久化，那么它也无法保留对于外层变量的引用。例如：12345678910111213function noClosure()&#123; var count = 0; function inner()&#123; console.log(++count); &#125; inner();&#125;noClosure(); // 输出 1noClosure(); // 输出 1noClosure(); // 输出 1 由于这个例子的 inner() 没有被持久化，调用时只能直接调用外层函数 noClosure() 。此时内层的 inner() 每次被调用后就结束了生命周期，相关的作用域也被销毁，因此 count 变量也不会被保留引用，这样每次调用 noClosure() 都只会输出 1 。由此可以进一步总结闭包的概念：闭包是以某种方式被持久化、并保留了对外层自由变量的引用的函数。实际的闭包指的是被持久化的函数以及它所保留的对外层变量的引用的组合。由于在Javascript语言中，只有函数内部的子函数才能读取局部变量，因此可以把闭包简单理解成”定义在一个函数内部的函数”。所以，在本质上，闭包就是将函数内部和函数外部连接起来的一座桥梁。 闭包的用途闭包可以用在许多地方。它的最大用处有两个，一个是前面提到的可以读取函数内部的变量，另一个就是让这些变量的值始终保持在内存中。方便调用上下文的局部变量。 使用闭包的注意点1）由于闭包会使得函数中的变量都被保存在内存中，内存消耗很大，所以不能滥用闭包，否则会造成网页的性能问题，在IE中可能导致内存泄露。解决方法是，在退出函数之前，将不使用的局部变量全部删除。2）闭包会在父函数外部，改变父函数内部变量的值。所以，如果你把父函数当作对象（object）使用，把闭包当作它的公用方法（Public Method），把内部变量当作它的私有属性（private value），这时一定要小心，不要随便改变父函数内部变量的值。]]></content>
+      <tags>
+        <tag>javascript</tag>
+        <tag>每周学习笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[前端框架和原生js的选择困惑]]></title>
+    <url>%2F2017%2F03%2F21%2F%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6%E5%92%8C%E5%8E%9F%E7%94%9Fjs%E7%9A%84%E9%80%89%E6%8B%A9%E5%9B%B0%E6%83%91%2F</url>
+    <content type="text"><![CDATA[最近用框架写东西有点多，快速开发用框架没错，毕竟用着也很爽，但问题是用框架开发，关键的技术前提给你预设好了，重要的技术决定也帮你做了，你做得最多的就是往里填展示逻辑，业务逻辑。而学习需要的是把技术掰开来，扯碎了再装起来，知道“原来如此”的过程。虽然遇到的问题基本都能解决，但写的越多总感觉自己不太深入，今天遇到一个问题，也印证了我的担忧，自己有些停在表面了，光解决问题没深入学习。回头看一下发现，最近每天工作用Vue，平时还写写React，小程序什么的。但是原生js写的看的很少。就像在武侠里练武是一样的，只学了一些“花拳绣腿招式”，但是“内功修养”还不到家，感觉不太妙。所以是时候要闭关修炼一段时间js了，回到基础知识中去，等有了扎实的“内功”基础，学任何框架也就只是概念迁移的事情，并没有特别要学的地方，拿起来用应该就行了。]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[事件冒泡和事件捕获]]></title>
+    <url>%2F2017%2F03%2F18%2F%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1%E5%92%8C%E4%BA%8B%E4%BB%B6%E6%8D%95%E8%8E%B7%2F</url>
+    <content type="text"><![CDATA[一 事件阶段一般的，事件分为三个阶段：捕获阶段、目标阶段和冒泡阶段。 1 捕获阶段：事件的第一个阶段是捕获阶段。事件从最不精确的对象(文档根节点)开始触发，然后到触发最精确的对象(目标对象节点)结束。途中经过各个层次的DOM节点，并在各节点上触发捕获事件，直到到达事件的目标节点。当你使用事件捕获时，父级元素事件先触发，子级元素后触发。作用：捕获阶段的主要任务是建立传播路径，在冒泡阶段，事件会通过这个路径回溯到文档跟节点。 2 目标阶段：当事件到达目标节点的，事件就进入了目标阶段。事件在目标节点上被触发，然后会逆向回流，直到传播至最外层的文档节点。 3 冒泡阶段：事件按照从最精确的对象(目标对象节点)开始触发，一直到最不精确的事件目标(文档根节点)的顺序触发结束。事件在目标元素上触发后，并不在这个元素上终止。它会随着DOM树一层层向上冒泡，回溯到根节点。当你使用事件冒泡时，子级元素事件先触发，父级元素后触发。作用：冒泡过程非常有用。它将我们从对特定元素的事件监听中释放出来，如果没有事件冒泡，我们需要监听很多不同的元素来确保捕获到想要的事件。 二 冒泡阶段调用事件处理函数三 捕获阶段调用事件处理函数四 事件代理在传统的事件处理中，你按照需要为每一个元素添加或者是删除事件处理器。然而，事件处理器将有可能导致内存泄露或者是性能下降——你用得越多这种风险就越大。JavaScript事件代理可以把事件处理器添加到一个父元素上，这样就避免了把事件处理器添加到多个子元素上。 1 如何运作事件代理用到了两个JavaSciprt事件特性：事件冒泡以及目标元素。当一个元素上的事件被触发的时候，同样的事件将会在那个元素的所有祖先元素中被触发。这一过程被称为事件冒泡；使用事件代理，我们可以把事件处理器添加到一个元素上，等待一个事件从它的子级元素里冒泡上来，并且可以得知这个事件是从哪个元素开始的。 2 带来的好处比如说在一个10列、100行的HTML表格里，让其每一个单元格在被点击的时候变成可编辑状态。如果把事件处理器加到这1000个单元格会产生一个很大的性能问题，并且有可能导致内存泄露甚至是浏览器的崩溃。相反地，使用事件代理，你只需要把一个事件处理器添加到table元素上就可以了，这个函数可以把点击事件给截下来，并且判断出是哪个单元格被点击了。 五 阻止事件冒泡（stopPropagation）1 什么时候要阻止事件冒泡当父类也有同样类型的方法，但在调用子类方法的时候不想触发父类方法的时候要阻止冒泡。例如：document上有A事件，div有B事件，div里面的span有C事件，如果不给span和div加阻止事件冒泡的话，点击span时就会触发到div的B事件、document的A事件，当点击span时不想触发div和document的事件就要加上阻止事件冒泡，div也是一样的道理。如果不加阻止事件冒泡，便会由于事件冒泡，该DOM目标节点的所有父节点事件也会触发，执行了回调函数，这样就违背了最初的本意了。 2 如何阻止事件冒泡阻止事件冒泡有3种方法 (1) event.stopPropagation(); 事件处理过程中，阻止了事件冒泡，但不会阻击默认行为（它就执行了超链接的跳转） (2) return false; 事件处理过程中，阻止了事件冒泡，也阻止了默认行为（比如刚才它就没有执行超链接的跳转） (3) event.preventDefault(); 如果把它放在头部A标签的click事件中，点击“点击我”。 会发现它依次弹出：我是最里层—-&gt;我是中间层—-&gt;我是最外层，但最后却没有跳转到百度 它的作用是：事件处理过程中，不阻击事件冒泡，但阻击默认行为（它只执行所有弹框，却没有执行超链接跳转） 3 无法在捕获阶段阻止事件冒泡这里需要注意的是，我们无法在事件捕获阶段阻止事件冒泡。例如，我们在代码里加上true，如图所示，第一个li会触发事件。因为捕获是从根节点向目标节点触发，而冒泡是从目标节点向根节点触发。]]></content>
+      <tags>
+        <tag>javascript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[自己封装的一个ajax函数]]></title>
+    <url>%2F2017%2F03%2F10%2F%E8%87%AA%E5%B7%B1%E5%B0%81%E8%A3%85%E7%9A%84%E4%B8%80%E4%B8%AAajax%E5%87%BD%E6%95%B0%2F</url>
+    <content type="text"><![CDATA[一共只留了五个参数，他们分别是发送方式（type）、发请求的url（url）、是否为异步请求（async）、发送的参数（data）、传输成功的回调函数（success） 函数代码如下: 12345678910111213141516171819202122232425262728293031323334353637383940414243/* 封装ajax函数 * @param &#123;string&#125;opt.type http连接的方式，包括POST和GET两种方式，默认使用GET * @param &#123;string&#125;opt.url 发送请求的url * @param &#123;boolean&#125;opt.async 是否为异步请求，true为异步的，false为同步的 * @param &#123;object&#125;opt.data 发送的参数，格式为对象类型 * @param &#123;function&#125;opt.success ajax发送并接收成功调用的回调函数 */function ajax(opt) &#123; opt = opt || &#123;&#125;; var type = opt.type || &apos;GET&apos;; type = type.toUpperCase() || &apos;GET&apos;; var url = opt.url || &apos;&apos;; var async = opt.async || true; var data = opt.data || null; var success = opt.success || function () &#123;&#125;; var xmlHttp = null; if (XMLHttpRequest) &#123; xmlHttp = new XMLHttpRequest(); &#125; else &#123; xmlHttp = new ActiveXObject(&apos;Microsoft.XMLHTTP&apos;); &#125; var params = []; for (var key in data)&#123; params.push(key + &apos;=&apos; + data[key]); &#125; var dataStr = params.join(&apos;&amp;&apos;); if (type === &apos;POST&apos;) &#123; xmlHttp.open(type, url, async); xmlHttp.setRequestHeader(&apos;Content-Type&apos;, &apos;application/x-www-form-urlencoded;charset=utf-8&apos;); xmlHttp.send(dataStr); &#125; else &#123; xmlHttp.open(type, url + &apos;?&apos; + dataStr, async); xmlHttp.send(null); &#125; xmlHttp.onreadystatechange = function () &#123; if (xmlHttp.readyState == 4 &amp;&amp; xmlHttp.status == 200) &#123; success(xmlHttp.responseText); &#125; &#125;;&#125; 使用实例：1234567891011ajax(&#123; method: &apos;POST&apos;, url: &apos;test.php&apos;, data: &#123; name1: &apos;value1&apos;, name2: &apos;value2&apos; &#125;, success: function (response) &#123; // codes here &#125;&#125;);]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
+        <tag>ajax</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[常见算法的JS实现(持续更新)]]></title>
+    <url>%2F2017%2F03%2F06%2F%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E7%9A%84JS%E5%AE%9E%E7%8E%B0%2F</url>
+    <content type="text"><![CDATA[排序算法冒泡排序1234567891011121314151617function bubbleSort(arr)&#123; var i = 0, j = 0; for(i=1; i&lt;arr.length; i++)&#123; for(j=0; j&lt;=arr.length-i; j++)&#123; var temp = 0; // &quot;&gt;&quot; 从小到大排序 // &quot;&lt;&quot; 从大到小排序 if(arr[j] &gt; arr[j+1])&#123; temp = arr[j]; arr[j] = arr[j+1]; arr[j+1] = temp; &#125; &#125; &#125; return arr;&#125; 快速排序123456789101112131415161718192021222324function quickSort(arr,l,r)&#123; if(l &lt; r)&#123; var i = l, j = r, x = arr[i]; while(i&lt;j)&#123; while(i&lt;j &amp;&amp; arr[j]&gt;x) j--; if(i&lt;j) //这里用i++，被换过来的必然比x小，赋值后直接让i自加，不用再比较，可以提高效率 arr[i++] = arr[j]; while(i&lt;j &amp;&amp; arr[i]&lt;x) i++; if(i&lt;j) //这里用j--，被换过来的必然比x大，赋值后直接让j自减，不用再比较，可以提高效率 arr[j--] = arr[i]; &#125; arr[i] = x; quickSort(arr, l, i-1); quickSort(arr, i+1, r); &#125;&#125; 二路归并1234567891011121314151617181920function merge(left, right) &#123; var result = [], il = 0, ir = 0; while (il &lt; left.length &amp;&amp; ir &lt; right.length) &#123; if (left[il] &lt; right[ir]) &#123; result.push(left[il++]); &#125; else &#123; result.push(right[ir++]); &#125; &#125; while(left[il])&#123; result.push(left[il++]); &#125; while(right[ir])&#123; result.push(right[ir++]); &#125; return result;&#125; 字符串操作判断回文字符串123456789101112function palindrome(str)&#123; // \W匹配任何非单词字符。等价于“[^A-Za-z0-9_]”。 var re = /[\W_]/g; // 将字符串变成小写字符,并干掉除字母数字外的字符 var lowRegStr = str.toLowerCase().replace(re,&apos;&apos;); // 如果字符串lowRegStr的length长度为0时，字符串即是palindrome if(lowRegStr.length===0) return true; // 如果字符串的第一个和最后一个字符不相同，那么字符串就不是palindrome if(lowRegStr[0]!=lowRegStr[lowRegStr.length-1]) return false; //递归 return palindrome(lowRegStr.slice(1,lowRegStr.length-1));&#125; 翻转字符串思路一：反向遍历字符串123456function reverseString(str)&#123; var tmp = &apos;&apos;; for(var i=str.length-1; i&gt;=0; i--) tmp += str[i]; return tmp&#125; 思路二：转化成array操作123456789101112function reverseString(str)&#123; var arr = str.split(&quot;&quot;); var i = 0,j = arr.length-1; while(i&lt;j)&#123; tmp = arr[i]; arr[i] = arr[j]; arr[j] = tmp; i++; j--; &#125; return arr.join(&quot;&quot;);&#125; 生成指定长度随机字符串12345678function randomString(n)&#123; var str = &apos;abcdefghijklmnopqrstuvwxyz0123456789&apos;; var tmp = &apos;&apos;; for(var i=0; i&lt;n; i++) &#123; tmp += str.charAt(Math.round(Math.random()*str.length)); &#125; return tmp;&#125; 统计字符串中次数最多字母12345678910111213141516171819202122function findMaxDuplicateChar(str) &#123; if(str.length == 1) &#123; return str; &#125; var charObj = &#123;&#125;; for(var i = 0; i &lt; str.length; i++) &#123; if(!charObj[str.charAt(i)]) &#123; charObj[str.charAt(i)] = 1; &#125; else &#123; charObj[str.charAt(i)] += 1; &#125; &#125; var maxChar = &apos;&apos;, maxValue = 1; for(var k in charObj) &#123; if(charObj[k] &gt;= maxValue) &#123; maxChar = k; maxValue = charObj[k]; &#125; &#125; return maxChar + &apos;：&apos; + maxValue;&#125; 数组操作数组去重1234567891011function unique(arr)&#123; var obj = &#123;&#125; var result = [] for(var i in arr)&#123; if(!obj[arr[i]])&#123; obj[arr[i]] = true; result.push(arr[i]); &#125; &#125; return result;&#125; 数组中最大差值123456789function getMaxProfit(arr)&#123; var min = arr[0], max = arr[0]; for(var i = 0; i &lt; arr.length; i++)&#123; if(arr[i] &lt; min) min = arr[i]; if(arr[i] &gt; max) max = arr[i]; &#125; return max - min;&#125; 其他常见算法阶乘非递归实现123456789function factorialize(num) &#123; var result = 1; if(num &lt; 0) return -1; if(num == 0 || num == 1) return 1; while(num&gt;1) &#123; result *= num--; &#125; return result;&#125; 递归实现123456function factorialize(num) &#123; var result = 1; if(num &lt; 0) return -1; if(num == 0 || num == 1) return 1; if(num &gt; 1) return num*factorialize(num-1);&#125; 生成菲波那切数列强行递归实现123456789101112function getfib(n)&#123; if(n == 0) return 0; if(n == 1) return 1; if(n &gt; 1) return getfib(n-1) + getfib(n-2);&#125;function fibo(len)&#123; var fibo = []; for(var i = 0; i &lt; len; i++)&#123; fibo.push(getfib(i)); &#125; return fibo;&#125; 简约非递归实现12345678910111213function getFibonacci(n) &#123; var fibarr = []; var i = 0; while(i &lt; n) &#123; if(i &lt;= 1) &#123; fibarr.push(i); &#125; else &#123; fibarr.push(fibarr[i - 1] + fibarr[i - 2]) &#125; i++; &#125; return fibarr;&#125; 二分查找非递归实现123456789101112131415function binary_search(arr, key) &#123; var low = 0, high = arr.length - 1; while(low &lt;= high)&#123; var mid = parseInt((high + low) / 2); if(key == arr[mid])&#123; return mid; &#125;else if(key &gt; arr[mid])&#123; low = mid + 1; &#125;else if(key &lt; arr[mid])&#123; high = mid -1; &#125; &#125; return -1;&#125; 递归实现1234567891011function binary_search2(arr, low, high, key) &#123; if(low &gt; high) return -1; var mid = parseInt((low + high)/2); if(key == arr[mid]) &#123; return mid; &#125; else if(key &gt; arr[mid]) &#123; return binary_search2(arr, mid+1, high, key); &#125; else if(key &lt; arr[mid]) &#123; return binary_search2(arr, low, mid-1, key); &#125;&#125;]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[vuejs 中如何优雅的获取 Input 值]]></title>
+    <url>%2F2017%2F02%2F27%2Fvuejs-%E4%B8%AD%E5%A6%82%E4%BD%95%E4%BC%98%E9%9B%85%E7%9A%84%E8%8E%B7%E5%8F%96-Input-%E5%80%BC%2F</url>
+    <content type="text"><![CDATA[vue 中获取 Input 值 我一般采取v-model或ref的方法1，双向绑定 v-model 分两种情况 input 默认为空。这种情况使用 v-model 最方便，通过 this.inputName 即可获取到对应的值。input 有默认值。即，设置了 value 属性的 Input。这种情况不能使用 v-model。否则 data 中的初始化值会把 value 的值覆盖掉。正确的姿势是使用 v-model, 然后通过 ajax 从后台拉取默认值，给对应的 vuejs 变量赋值。对于简单的后台渲染页面，这种方式略显复杂。 2，使用ref 在不适合使用 v-model 的时候，我更倾向于使用 ref.vuejs 2.0 之后，废弃了 vuejs 1.0 中的 this.$els，改用 this.$refs。即，使用 ref 属性来标识一个元素。 示例代码： demo.html:123456789101112131415161718192021222324252627&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt; &lt;meta charset=&quot;utf-8&quot;&gt; &lt;title&gt;Index Page&lt;/title&gt;&lt;/head&gt;&lt;body&gt; &lt;form action=&quot;&quot; id=&quot;demo&quot;&gt; &lt;input type=&quot;text&quot; value=&quot;调试 vuejs 2.0&quot; ref=&quot;input1&quot;&gt; &lt;a href=&quot;javascript:void(0)&quot; v-on:click=&quot;test1&quot;&gt;测试&lt;/a&gt; &lt;br&gt; &lt;span&gt;&#123;&#123; result1 &#125;&#125;&lt;/span&gt; &lt;br&gt; &lt;input type=&quot;text&quot; v-model=&quot;input2&quot;&gt; &lt;a href=&quot;javascript:void(0)&quot; v-on:click=&quot;test2&quot;&gt;测试&lt;/a&gt; &lt;br&gt; &lt;span&gt;&#123;&#123; result2 &#125;&#125;&lt;/span&gt; &lt;/form&gt; &lt;script src=&quot;http://cdn.bootcss.com/vue/2.0.3/vue.min.js&quot;&gt;&lt;/script&gt; &lt;script type=&quot;text/javascript&quot; src=&quot;demo.js&quot;&gt;&lt;/script&gt;&lt;/body&gt;&lt;/html&gt; demo.js:1234567891011121314151617181920212223new Vue(&#123; el: &quot;#demo&quot;, data: &#123; result1: null, result2: null, input2: &quot;&quot; &#125;, created: function() &#123; // the created hook is called after the instance is created &#125;, methods: &#123; test1: function () &#123; this.result1 = this.$refs.input1.value + &quot; 成功!&quot;; &#125;, test2: function () &#123; this.result2 = this.input2 + &quot; 成功!&quot;; &#125; &#125;&#125;)]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
+        <tag>vue.js</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[为什么要写博客]]></title>
+    <url>%2F2017%2F02%2F27%2F%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%86%99%E5%8D%9A%E5%AE%A2%2F</url>
+    <content type="text"><![CDATA[写博客这个事情我计划了很久，但是太懒也怕写出来的东西质量不高没人看就一直藏在心里。不得不承认，建立技术博客的初衷是因为找工作，哈哈，说起来还是有点功利的性质的。最近刚好在看艾力的《人生的84000种可能》，产生了很多共鸣，没有人是完美的，但是可以通过不断的努力去接近完美，能在这世界中留下自己的印记，能证明自己在世界上存在过，这就足够我去挑战了，何况证明自己的同时，亦可助人，何乐而不为呢。这也许就是我要写博客的理由吧。]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[再回南京]]></title>
+    <url>%2F2016%2F12%2F25%2F%E5%86%8D%E5%9B%9E%E5%8D%97%E4%BA%AC%2F</url>
+    <content type="text"><![CDATA[时隔一年多，又回到了南京。南京什么都没变，还是红色的2号线，蓝色的1号线。感觉很亲切。下了飞机，我们像往常一样，拖着行李箱，上了地铁，只是这次，我们不再是去学校……而是去新公司报道，为了努力养活自己，更为了养活梦想，虽然改变不了生活，但也不被生活改变。]]></content>
+  </entry>
+</search>
