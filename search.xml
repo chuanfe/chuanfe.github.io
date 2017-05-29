@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[JavaScript深入理解call和apply并模拟实现]]></title>
     <url>%2F2017%2F05%2F29%2FJavaScript%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3call%E5%92%8Capply%E5%B9%B6%E6%A8%A1%E6%8B%9F%E5%AE%9E%E7%8E%B0%2F</url>
-    <content type="text"><![CDATA[call一句话介绍 call： call 方法可将一个函数的对象上下文从初始的上下文改变为由 thisObj 指定的新对象。]]></content>
+    <content type="text"><![CDATA[call一句话介绍 call： call 方法可将一个函数的对象上下文从初始的上下文改变为由 thisObj 指定的新对象]]></content>
       <tags>
         <tag>javascript</tag>
       </tags>
