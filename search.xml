@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[JavaScript深入理解call和apply并模拟实现]]></title>
+    <title><![CDATA[时间戳精确转换为指定格式]]></title>
+    <url>%2F2017%2F06%2F01%2F%E6%97%B6%E9%97%B4%E6%88%B3%E7%B2%BE%E7%A1%AE%E8%BD%AC%E6%8D%A2%E4%B8%BA%E6%8C%87%E5%AE%9A%E6%A0%BC%E5%BC%8F%2F</url>
+    <content type="text"><![CDATA[月-日-时-分-秒向getMonthDate方法传递时间戳参数，返回对应格式的时间12345678910111213141516getMonthDate(time) &#123; var now = new Date(parseInt(time)); var year=now.getFullYear(); var month=now.getMonth()+1; var date=now.getDate(); var hour=now.getHours(); var minute=now.getMinutes(); var second=now.getSeconds(); if (second &lt; 10) &#123; second = &quot;0&quot; + second; &#125; if (minute &lt; 10) &#123; minute = &quot;0&quot; + minute; &#125; return month+&quot;-&quot;+date+&quot; &quot;+hour+&quot;:&quot;+minute+&quot;:&quot;+second; &#125; 年-月-日-时-分-秒向getFullTime方法传递时间戳参数，返回对应格式的时间12345678910111213141516getFullTime(time) &#123; var now = new Date(parseInt(time)); var year=now.getFullYear(); var month=now.getMonth()+1; var date=now.getDate(); var hour=now.getHours(); var minute=now.getMinutes(); var second=now.getSeconds(); if (second &lt; 10) &#123; second = &quot;0&quot; + second; &#125; if (minute &lt; 10) &#123; minute = &quot;0&quot;+minute; &#125; return year+&quot;-&quot;+month+&quot;-&quot;+date+&quot; &quot;+hour+&quot;:&quot;+minute+&quot;:&quot;+second; &#125;]]></content>
+      <tags>
+        <tag>javascript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[深入理解call和apply并模拟实现]]></title>
     <url>%2F2017%2F05%2F29%2FJavaScript%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3call%E5%92%8Capply%E5%B9%B6%E6%A8%A1%E6%8B%9F%E5%AE%9E%E7%8E%B0%2F</url>
     <content type="text"><![CDATA[call一句话介绍 call： call 方法可将一个函数的对象上下文从初始的上下文改变为由 thisObj 指定的新对象]]></content>
       <tags>
