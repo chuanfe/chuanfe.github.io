@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[一个结合Vue的后台框架的实现]]></title>
+    <url>%2F2017%2F06%2F16%2F%E4%B8%80%E4%B8%AA%E5%AE%8C%E7%BE%8E%E7%BB%93%E5%90%88Vue%E7%9A%84%E5%90%8E%E5%8F%B0%E6%A1%86%E6%9E%B6BadminLTE%2F</url>
+    <content type="text"><![CDATA[这是一个基于在公司用的开源UI框架改造以后的一个后台框架BadminLTE，原公司框架参考了 adminLTE第一版BadminLTE 1.0 在这基础上做了精简和优化，旨在更好的结合Vue来开发 项目地址]]></content>
+      <tags>
+        <tag>Vue</tag>
+        <tag>前端技术</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[浙西峡谷两日探游]]></title>
     <url>%2F2017%2F06%2F12%2F%E6%B5%99%E8%A5%BF%E5%A4%A7%E5%B3%A1%E8%B0%B7%E4%B8%A4%E6%97%A5%E6%8E%A2%E6%B8%B8%2F</url>
     <content type="text"><![CDATA[]]></content>
