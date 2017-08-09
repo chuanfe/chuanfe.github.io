@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[常用Git命令汇总]]></title>
+    <url>%2F2017%2F07%2F09%2F%E5%B8%B8%E7%94%A8Git%E5%91%BD%E4%BB%A4%E6%B1%87%E6%80%BB%2F</url>
+    <content type="text"><![CDATA[Git常用的就那几个命令，本来不需要特地总结，但偏也有没按套路走瞎折腾的时候会用到其他一些不常用命令来补救，不常用的就爱忘，省的每次都到处找。就都总结在这里吧，以后遇到不常用但有场景用过的就来更新一次 首先还是常用的那几个1, git init 仓库初始化12345$ git init //在当前目录新建一个Git代码库$ git init [project-name] //新建一个目录，将其初始化为Git代码库$ git clone [url] //下载一个项目到本地 2, git add 文件添加到暂存区，等待提交12345$ git add [file] //添加指定文件到暂存区$ git add [dir] //添加指定目录到暂存区，包括子目录$ git add * //添加当前目录的所有文件到暂存区 3, git commit 代码提交123$ git commit [file] -m [message] //提交暂存区的指定文件到仓库区$ git commit -m [message] //提交暂存区所有文件到仓库区 4, 远程同步123456789$ git remote -v //显示所有远程仓库$ git remote add [name] [url] //新增一个远程仓库，并命名$ git pull [remote] [branch] //更新同步远程仓库，与本地分支合并$ git push [remote] [branch] //推送本地指定分支到远程仓库$ git push [remote] --all //推送本地所有分支到远程仓库 特殊场景重置当前Git仓库配置，需要删除.git文件，再重新生成.git123$ ls -a //查看当前仓库文件，-a包含隐藏的 .文件$ rm -rf .git //删除当前.git$ git init //重新生成新的.git文件，就是一个新的git仓库了，然后该提交提交 不小心添加add，或者add了不想提交的文件夹，撤销之后再重新add123$ git status //查看当前提交状态$ git reset . //撤销前一次提交操作$ git status //查看当前提交状态，然后该提交再提交]]></content>
+      <tags>
+        <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[浙西峡谷两日探游]]></title>
     <url>%2F2017%2F06%2F12%2F%E6%B5%99%E8%A5%BF%E5%A4%A7%E5%B3%A1%E8%B0%B7%E4%B8%A4%E6%97%A5%E6%8E%A2%E6%B8%B8%2F</url>
     <content type="text"><![CDATA[]]></content>
