@@ -90,16 +90,16 @@
 
 
 
-<meta name="description" content="Git常用的就那几个命令，本来不需要特地总结，但偏也有没按套路走瞎折腾的时候会用到其他一些不常用命令来补救，不常用的就爱忘，省的每次都到处找。就都总结在这里吧，以后遇到不常用但有场景用过的就来更新一次">
+<meta name="description" content="Git常用的就那几个命令，本来不需要特地总结，但偏也有没按套路走瞎折腾的时候，这时候就会用到其他一些不常用命令来补救，不常用的就爱忘，省的每次都到处找。就都总结在这里吧，以后遇到不常用但有场景用过的就来更新一次。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="常用Git命令汇总">
 <meta property="og:url" content="http://yoursite.com/2017/07/09/常用Git命令汇总/index.html">
 <meta property="og:site_name" content="chuanFE">
-<meta property="og:description" content="Git常用的就那几个命令，本来不需要特地总结，但偏也有没按套路走瞎折腾的时候会用到其他一些不常用命令来补救，不常用的就爱忘，省的每次都到处找。就都总结在这里吧，以后遇到不常用但有场景用过的就来更新一次">
-<meta property="og:updated_time" content="2017-08-09T02:22:03.000Z">
+<meta property="og:description" content="Git常用的就那几个命令，本来不需要特地总结，但偏也有没按套路走瞎折腾的时候，这时候就会用到其他一些不常用命令来补救，不常用的就爱忘，省的每次都到处找。就都总结在这里吧，以后遇到不常用但有场景用过的就来更新一次。">
+<meta property="og:updated_time" content="2017-08-09T02:24:07.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="常用Git命令汇总">
-<meta name="twitter:description" content="Git常用的就那几个命令，本来不需要特地总结，但偏也有没按套路走瞎折腾的时候会用到其他一些不常用命令来补救，不常用的就爱忘，省的每次都到处找。就都总结在这里吧，以后遇到不常用但有场景用过的就来更新一次">
+<meta name="twitter:description" content="Git常用的就那几个命令，本来不需要特地总结，但偏也有没按套路走瞎折腾的时候，这时候就会用到其他一些不常用命令来补救，不常用的就爱忘，省的每次都到处找。就都总结在这里吧，以后遇到不常用但有场景用过的就来更新一次。">
 
 
 
@@ -379,7 +379,7 @@
       
 
       
-        <p>Git常用的就那几个命令，本来不需要特地总结，但偏也有没按套路走瞎折腾的时候会用到其他一些不常用命令来补救，不常用的就爱忘，省的每次都到处找。就都总结在这里吧，以后遇到不常用但有场景用过的就来更新一次<br><a id="more"></a></p>
+        <p>Git常用的就那几个命令，本来不需要特地总结，但偏也有没按套路走瞎折腾的时候，这时候就会用到其他一些不常用命令来补救，不常用的就爱忘，省的每次都到处找。就都总结在这里吧，以后遇到不常用但有场景用过的就来更新一次。<br><a id="more"></a></p>
 <h2 id="首先还是常用的那几个"><a href="#首先还是常用的那几个" class="headerlink" title="首先还是常用的那几个"></a>首先还是常用的那几个</h2><p>1, git init 仓库初始化<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$ git init  //在当前目录新建一个Git代码库</div><div class="line"></div><div class="line">$ git init [project-name]  //新建一个目录，将其初始化为Git代码库</div><div class="line"></div><div class="line">$ git clone [url]  //下载一个项目到本地</div></pre></td></tr></table></figure></p>
 <p>2, git add 文件添加到暂存区，等待提交<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$ git add [file]  //添加指定文件到暂存区</div><div class="line"></div><div class="line">$ git add [dir]  //添加指定目录到暂存区，包括子目录</div><div class="line"></div><div class="line">$ git add *  //添加当前目录的所有文件到暂存区</div></pre></td></tr></table></figure></p>
 <p>3, git commit 代码提交<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ git commit [file]  -m [message]  //提交暂存区的指定文件到仓库区</div><div class="line"></div><div class="line">$ git commit -m [message]  //提交暂存区所有文件到仓库区</div></pre></td></tr></table></figure></p>
