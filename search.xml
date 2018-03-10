@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[ES6转ES5小记]]></title>
+    <url>%2F2018%2F03%2F10%2FES6%E8%BD%ACES5%E5%B0%8F%E8%AE%B0%2F</url>
+    <content type="text"><![CDATA[我项目用的gulp构建，所以首先就想到用gulp实现自动将ES6转成ES5，转换的过程通过babel来实现，gulp负责实时监听代码变化并调用babel完成转换任务，于是有了下面的一个方案： gulp + babel 编译1. 安装gulp, gulp-babel, babel-core, babel-preset-es2015,1npm install --save-dev gulp 1npm install --save-dev gulp-babel 1npm install --save-dev babel-core 1npm install --save-dev babel-preset-es2015 2. 配置gulp，在根目录下新建gulpfile.js文件12345678910var gulp = require(&quot;gulp&quot;); var babel = require(&quot;gulp-babel&quot;); gulp.task(&quot;default&quot;, function () &#123; return gulp.src(&quot;js**/*.js&quot;)// ES6 源码存放的路径 .pipe(babel(&#123; presets: [&apos;es2015&apos;] &#125;)) .pipe(gulp.dest(&quot;dist&quot;)); //转换成 ES5 存放的路径 &#125;); ES6例子：12let arr = [&#123;a:1,b:2&#125;,&#123;a:3,b:2&#125;]let targetItem = arr.find((item) =&gt; item.a == 1) 转换后的es5：1234var arr = [&#123; a: 1, b: 2 &#125;, &#123; a: 3, b: 2 &#125;];var targetItem = arr.find(function (item) &#123; return item.a == 1;&#125;); 至此，已经能实现项目中大部分ES6转成ES5的需求，但是还有一些新的api，babel是不转换的，细心的你肯定已经发现，上述例子中babel只是转换了let和箭头函数，并没有转换ES6为Array新增的find()函数，类似这样的api还有很多，比如Iterator、Generator、Set、Maps、Proxy、Reflect、Symbol、Promise等全局对象，以及一些定义在全局对象上的方法（比如Object.assign）都不会转码。如果想让这些没转换的方法运行，需要使用babel-polyfill，为当前环境提供一个垫片。polyfill相当于用来实现浏览器不支持原生功能的代码 3. babel-polyfill扩展新的API安装命令：1$ npm install --save babel-polyfill 然后，在脚本头部引入123import &apos;babel-polyfill&apos;;// 或者require(&apos;babel-polyfill&apos;); 这样在项目中就可以愉快的书写ES6代码了，由于babel-polyfill并不是真正意义上将ES6转换成ES5，引入的体积也比较庞大，所以不推荐用polyfill，正常到第2步就可以了。]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[element-UI1.0 autocomple 需手动添加blur事件]]></title>
+    <url>%2F2017%2F11%2F21%2Felement-UI1-0-autocomple-%E9%9C%80%E6%89%8B%E5%8A%A8%E6%B7%BB%E5%8A%A0blur%E4%BA%8B%E4%BB%B6%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
     <title><![CDATA[常用Git命令汇总]]></title>
     <url>%2F2017%2F07%2F09%2F%E5%B8%B8%E7%94%A8Git%E5%91%BD%E4%BB%A4%E6%B1%87%E6%80%BB%2F</url>
     <content type="text"><![CDATA[Git常用的就那几个命令，本来不需要特地总结，但偏也有没按套路走瞎折腾的时候，这时候就会用到其他一些不常用命令来补救，不常用的就爱忘，省的每次都到处找。就都总结在这里吧，以后遇到不常用但有场景用过的就来更新一次。 首先还是常用的那几个1, git init 仓库初始化12345$ git init //在当前目录新建一个Git代码库$ git init [project-name] //新建一个目录，将其初始化为Git代码库$ git clone [url] //下载一个项目到本地 2, git add 文件添加到暂存区，等待提交12345$ git add [file] //添加指定文件到暂存区$ git add [dir] //添加指定目录到暂存区，包括子目录$ git add * //添加当前目录的所有文件到暂存区 3, git commit 代码提交123$ git commit [file] -m [message] //提交暂存区的指定文件到仓库区$ git commit -m [message] //提交暂存区所有文件到仓库区 4, 远程同步123456789$ git remote -v //显示所有远程仓库$ git remote add [name] [url] //新增一个远程仓库，并命名$ git pull [remote] [branch] //更新同步远程仓库，与本地分支合并$ git push [remote] [branch] //推送本地指定分支到远程仓库$ git push [remote] --all //推送本地所有分支到远程仓库 特殊场景重置当前Git仓库配置，需要删除.git文件，再重新生成.git123$ ls -a //查看当前仓库文件，-a包含隐藏的 .文件$ rm -rf .git //删除当前.git$ git init //重新生成新的.git文件，就是一个新的git仓库了，然后该提交提交 不小心添加add，或者add了不想提交的文件夹，撤销之后再重新add123$ git status //查看当前提交状态$ git reset . //撤销前一次提交操作$ git status //查看当前提交状态，然后该提交再提交]]></content>
