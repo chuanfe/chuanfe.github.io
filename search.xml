@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[区块链带来了什么]]></title>
+    <url>%2F2018%2F03%2F10%2F%E5%8C%BA%E5%9D%97%E9%93%BE%E5%B8%A6%E6%9D%A5%E4%BA%86%E4%BB%80%E4%B9%88%2F</url>
+    <content type="text"><![CDATA[区块链（blockchain）是眼下的大热门，新闻媒体大量报道，受到各方高度关注。那区块链能给我们带来什么呢，我们需要一步步了解如下东西 什么是区块链区块链是一个去中心化的分布式账本数据库，没有中心，数据存储的每个节点都会同步复制整个账本，信息透明难以篡改，所以区块链技术本质上是一种数据库技术。 区块链的特点去中心化区块链没有管理员，它是彻底无中心的 区块区块链有什么用区块链开发]]></content>
+      <tags>
+        <tag>区块链</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[element-UI1.0 autocomple 需手动添加blur事件]]></title>
     <url>%2F2017%2F11%2F21%2Felement-UI1-0-autocomple-%E9%9C%80%E6%89%8B%E5%8A%A8%E6%B7%BB%E5%8A%A0blur%E4%BA%8B%E4%BB%B6%2F</url>
     <content type="text"></content>
