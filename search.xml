@@ -1,24 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[js点击实现在新窗口中打开页面]]></title>
-    <url>%2F2018%2F05%2F28%2Fjs%E7%82%B9%E5%87%BB%E5%AE%9E%E7%8E%B0%E5%9C%A8%E6%96%B0%E7%AA%97%E5%8F%A3%E4%B8%AD%E6%89%93%E5%BC%80%E9%A1%B5%E9%9D%A2%2F</url>
-    <content type="text"></content>
-  </entry>
-  <entry>
-    <title><![CDATA[区块链带来了什么]]></title>
-    <url>%2F2018%2F03%2F10%2F%E5%8C%BA%E5%9D%97%E9%93%BE%E5%B8%A6%E6%9D%A5%E4%BA%86%E4%BB%80%E4%B9%88%2F</url>
-    <content type="text"><![CDATA[区块链（blockchain）是眼下的大热门，新闻媒体大量报道，受到各方高度关注。那区块链能给我们带来什么呢，我们需要一步步了解如下东西 什么是区块链区块链是一个去中心化的分布式账本数据库，没有中心，数据存储的每个节点都会同步复制整个账本，信息透明难以篡改，所以区块链技术本质上是一种数据库技术。 区块链的特点去中心化区块链没有管理员，它是彻底无中心的 区块区块链有什么用区块链开发]]></content>
-      <tags>
-        <tag>区块链</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[element-UI1.0 autocomple 需手动添加blur事件]]></title>
-    <url>%2F2017%2F11%2F21%2Felement-UI1-0-autocomple-%E9%9C%80%E6%89%8B%E5%8A%A8%E6%B7%BB%E5%8A%A0blur%E4%BA%8B%E4%BB%B6%2F</url>
-    <content type="text"></content>
-  </entry>
-  <entry>
     <title><![CDATA[ES6转ES5小记]]></title>
     <url>%2F2017%2F09%2F03%2FES6%E8%BD%ACES5%E5%B0%8F%E8%AE%B0%2F</url>
     <content type="text"><![CDATA[ES6解决了ES5的好多坑，项目中也用了很多ES6语法，就是有些语法浏览器不支持。所以想用ES6只能转，我项目用的gulp构建，所以首先就想到用gulp实现自动将ES6转成ES5，转换的过程通过babel来实现，gulp负责实时监听代码变化并调用babel完成转换任务，于是有了下面的一个方案： gulp + babel 编译1. 安装gulp, gulp-babel, babel-core, babel-preset-es2015,1npm install --save-dev gulp 1npm install --save-dev gulp-babel 1npm install --save-dev babel-core 1npm install --save-dev babel-preset-es2015 2. 配置gulp，在根目录下新建gulpfile.js文件12345678910var gulp = require(&quot;gulp&quot;); var babel = require(&quot;gulp-babel&quot;); gulp.task(&quot;default&quot;, function () &#123; return gulp.src(&quot;js**/*.js&quot;)// ES6 源码存放的路径 .pipe(babel(&#123; presets: [&apos;es2015&apos;] &#125;)) .pipe(gulp.dest(&quot;dist&quot;)); //转换成 ES5 存放的路径 &#125;); ES6例子：12let arr = [&#123;a:1,b:2&#125;,&#123;a:3,b:2&#125;]let targetItem = arr.find((item) =&gt; item.a == 1) 转换后的es5：1234var arr = [&#123; a: 1, b: 2 &#125;, &#123; a: 3, b: 2 &#125;];var targetItem = arr.find(function (item) &#123; return item.a == 1;&#125;); 至此，已经能实现项目中大部分ES6转成ES5的需求，但是还有一些新的api，babel是不转换的，细心的你肯定已经发现，上述例子中babel只是转换了let和箭头函数，并没有转换ES6为Array新增的find()函数，类似这样的api还有很多，比如Iterator、Generator、Set、Maps、Proxy、Reflect、Symbol、Promise等全局对象，以及一些定义在全局对象上的方法（比如Object.assign）都不会转码。如果想让这些没转换的方法运行，需要使用babel-polyfill，为当前环境提供一个垫片。polyfill相当于用来实现浏览器不支持原生功能的代码 3. babel-polyfill扩展新的API安装命令：1$ npm install --save babel-polyfill 然后，在脚本头部引入123import &apos;babel-polyfill&apos;;// 或者require(&apos;babel-polyfill&apos;); 这样在项目中就可以愉快的书写ES6代码了，由于babel-polyfill并不是真正意义上将ES6转换成ES5，引入的体积也比较庞大，所以不推荐用polyfill，正常到第2步就可以了。]]></content>
